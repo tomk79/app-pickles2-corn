@@ -102,3 +102,12 @@ dist
 
 # TernJS port file
 .tern-port
+
+# This App
+.DS_Store
+Thumbs.db
+apple_identity.txt
+apple_codesign.json
+
+# Build
+Pickles 2 corn-*

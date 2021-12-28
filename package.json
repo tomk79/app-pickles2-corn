@@ -5,10 +5,10 @@
   "main": "app/main.js",
   "scripts": {
     "start": "electron .",
-    "build-darwin-arm64": "electron-packager ./app/ --platform=darwin --arch=arm64 --icon=icons/appicon-osx.icns --overwrite",
-    "build-darwin-x64": "electron-packager ./app/ --platform=darwin --arch=x64 --icon=icons/appicon-osx.icns --overwrite",
-    "build-win32-x64": "electron-packager ./app/ --platform=win32 --arch=x64 --icon=icons/appicon-win.ico --overwrite",
-    "build-linux-x64": "electron-packager ./app/ --platform=linux --arch=x64 --icon=icons/appicon-win.ico --overwrite",
+    "build-darwin-arm64": "electron-packager . --platform=darwin --arch=arm64 --icon=materials/icon/appicon-osx.icns --overwrite",
+    "build-darwin-x64": "electron-packager . --platform=darwin --arch=x64 --icon=materials/icon/appicon-osx.icns --overwrite",
+    "build-win32-x64": "electron-packager . --platform=win32 --arch=x64 --icon=materials/icon/appicon-win.ico --overwrite",
+    "build-linux-x64": "electron-packager . --platform=linux --arch=x64 --icon=materials/icon/appicon-win.ico --overwrite",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

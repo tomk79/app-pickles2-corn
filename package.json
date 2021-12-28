@@ -1,0 +1,21 @@
+{
+  "productName": "Pickles 2 corn",
+  "version": "2.1.0",
+  "description": "",
+  "main": "app/main.js",
+  "scripts": {
+    "start": "electron .",
+    "build-darwin-arm64": "electron-packager ./app/ --platform=darwin --arch=arm64 --icon=icons/appicon-osx.icns --overwrite",
+    "build-darwin-x64": "electron-packager ./app/ --platform=darwin --arch=x64 --icon=icons/appicon-osx.icns --overwrite",
+    "build-win32-x64": "electron-packager ./app/ --platform=win32 --arch=x64 --icon=icons/appicon-win.ico --overwrite",
+    "build-linux-x64": "electron-packager ./app/ --platform=linux --arch=x64 --icon=icons/appicon-win.ico --overwrite",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT License",
+  "devDependencies": {
+    "electron": "^16.0.5",
+    "electron-packager": "^15.4.0"
+  }
+}

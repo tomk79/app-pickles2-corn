@@ -57,17 +57,8 @@ if [ $APPLE_CODESIGN_JSON ]; then
     echo "cd $(pwd);"
 fi
 
-sleep 1s; echo ""; echo "=-=-=-=-=-=-=-=-=-= git submodule";
-git submodule update --init --recursive --force;
-
-sleep 1s; echo ""; echo "=-=-=-=-=-=-=-=-=-= composer install --no-dev";
-composer install --no-dev;
-
-sleep 1s; echo ""; echo "=-=-=-=-=-=-=-=-=-= npm install --only=production";
-npm install --only=production;
-
-sleep 1s; echo ""; echo "=-=-=-=-=-=-=-=-=-= npm install nw-builder";
-npm install nw-builder;
+sleep 1s; echo ""; echo "=-=-=-=-=-=-=-=-=-= npm install";
+npm install;
 
 if [ $APPLE_IDENTITY ]; then
     sleep 1s; echo ""; echo "=-=-=-=-=-=-=-=-=-= Saving Apple IDENTITY";

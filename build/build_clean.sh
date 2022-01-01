@@ -70,15 +70,23 @@ fi
 sleep 1s; echo ""; echo "=-=-=-=-=-=-=-=-=-= npm run build";
 
 npm run build-darwin-arm64;
+ditto -ck --rsrc --sequesterRsrc "./Pickles 2 corn-darwin-arm64" "./build/dist/Pickles 2 corn-darwin-arm64.zip"
+rm -r "./Pickles 2 corn-darwin-arm64"
 sleep 1s; echo "";
 
 npm run build-darwin-x64;
+ditto -ck --rsrc --sequesterRsrc "./Pickles 2 corn-darwin-x64" "./build/dist/Pickles 2 corn-darwin-x64.zip"
+rm -r "./Pickles 2 corn-darwin-x64"
 sleep 1s; echo "";
 
 npm run build-win32-x64;
+zip -q -y -r "./build/dist/Pickles 2 corn-win32-x64.zip" "./Pickles 2 corn-win32-x64"
+rm -r "./Pickles 2 corn-win32-x64"
 sleep 1s; echo "";
 
 npm run build-linux-x64;
+zip -q -y -r "./build/dist/Pickles 2 corn-linux-x64.zip" "./Pickles 2 corn-linux-x64"
+rm -r "./Pickles 2 corn-linux-x64"
 sleep 1s; echo "";
 
 sleep 1s; echo "";

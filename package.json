@@ -5,8 +5,8 @@
   "main": "app/main.js",
   "scripts": {
     "start": "electron .",
-    "build-darwin-arm64": "sh build/build_one.sh darwin arm64",
-    "build-darwin-x64": "sh build/build_one.sh darwin x64",
+    "build-darwin-arm64": "sh build/build_one.sh mas arm64",
+    "build-darwin-x64": "sh build/build_one.sh mas x64",
     "build-win32-x64": "sh build/build_one.sh win32 x64",
     "build-linux-x64": "sh build/build_one.sh linux x64",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,8 +14,11 @@
   "keywords": [],
   "author": "",
   "license": "MIT License",
+  "dependencies": {
+  },
   "devDependencies": {
     "electron": "^16.0.5",
+    "electron-osx-sign": "^0.5.0",
     "electron-packager": "^15.4.0"
   }
 }

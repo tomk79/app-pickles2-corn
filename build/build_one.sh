@@ -23,6 +23,7 @@ node_modules/.bin/electron-packager . \
     --arch=${ARCH} \
     --icon=${ICON} \
     --overwrite \
+    --out="build/"
     --ignore="^/(\.gitignore|\.gitmodules|materials|apple_[a-zA-Z0-9]+\.(json|txt)|build|tests|README.md)" \
     ;
 exit;

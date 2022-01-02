@@ -18,12 +18,20 @@ if [ ${PLATFORM} = "win32" ] ; then
 fi
 echo "Icon = ${ICON}"
 
+OSXOPTIONS="";
+if [ ${PLATFORM} = "darwin" ] ; then
+    if [ -e "./apple_team.plist" ] ; then
+        OSXOPTIONS="--extend-info='./apple_team.plist' --osx-sign";
+    fi
+fi
+
 node_modules/.bin/electron-packager . \
     --platform=${PLATFORM} \
     --arch=${ARCH} \
     --icon=${ICON} \
     --overwrite \
-    --out="build/"
-    --ignore="^/(\.gitignore|\.gitmodules|materials|apple_[a-zA-Z0-9]+\.(json|txt)|build|tests|README.md)" \
+    --out="build/tmp/" \
+    ${OSXOPTIONS} \
+    --ignore="^/(\.gitignore|\.gitmodules|materials|apple_[a-zA-Z0-9]+\.(json|txt|plist)|build|tests|README.md)" \
     ;
 exit;

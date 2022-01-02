@@ -101,7 +101,8 @@ typings/
 Thumbs.db
 apple_identity.txt
 apple_codesign.json
+apple_team.plist
 
 # Build
-Pickles 2 corn-*
+build/tmp/
 build/dist/

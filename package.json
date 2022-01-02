@@ -5,10 +5,10 @@
   "main": "app/main.js",
   "scripts": {
     "start": "electron .",
-    "build-darwin-arm64": "electron-packager . --platform=darwin --arch=arm64 --icon=materials/icon/appicon-osx.icns --overwrite --ignore=\"^/(\\.gitignore|\\.gitmodules|materials|apple_[a-zA-Z0-9]+\\.(json|txt)|build|tests|README.md)\"",
-    "build-darwin-x64": "electron-packager . --platform=darwin --arch=x64 --icon=materials/icon/appicon-osx.icns --overwrite --ignore=\"^/(\\.gitignore|\\.gitmodules|materials|apple_[a-zA-Z0-9]+\\.(json|txt)|build|tests|README.md)\"",
-    "build-win32-x64": "electron-packager . --platform=win32 --arch=x64 --icon=materials/icon/appicon-win.ico --overwrite --ignore=\"^/(\\.gitignore|\\.gitmodules|materials|apple_[a-zA-Z0-9]+\\.(json|txt)|build|tests|README.md)\"",
-    "build-linux-x64": "electron-packager . --platform=linux --arch=x64 --icon=materials/icon/appicon-win.ico --overwrite --ignore=\"^/(\\.gitignore|\\.gitmodules|materials|apple_[a-zA-Z0-9]+\\.(json|txt)|build|tests|README.md)\"",
+    "build-darwin-arm64": "sh build/build_one.sh darwin arm64",
+    "build-darwin-x64": "sh build/build_one.sh darwin x64",
+    "build-win32-x64": "sh build/build_one.sh win32 x64",
+    "build-linux-x64": "sh build/build_one.sh linux x64",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
